@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!-- Socket io -->
+    <script type="text/javascript" src="{{ url_for('static', filename='socket.io.js')}}"></script>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery/jquery-1.11.1.min.js')}}"></script>
+    {#    <script type="text/javascript" src="{{ url_for('static', filename='jquery/ui/jquery-ui.js')}}"></script>#}
+    {#    <link rel="stylesheet" href="{{ url_for('static', filename='jquery/ui/jquery-ui.css')}}">#}
+
+    <!-- Highcharts-->
+    <script type="text/javascript" src="{{ url_for('static', filename='highcharts/highcharts.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='highcharts/highcharts-more.js')}}"></script>
+
+    <!-- Knockout -->
+    <script type="text/javascript" src="{{ url_for('static', filename='knockout-3.2.0.js')}}"></script>
+
+    <!-- app js -->
+    <script src="{{ url_for('static', filename='align_image.js')}}"></script>
+
+    <!-- bootstap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css')}}">
+
+    <!-- app css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='align_image.css')}}">
+
+
+</head>
+<body onload="draw();">
+    <H1>Hello World!</H1>
+    <canvas id="image" width="981" height="1043"></canvas>
+    <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto; float: left;"></div>
+</body>
+</html>
