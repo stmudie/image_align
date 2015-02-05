@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <title></title>
 
-    <!-- Socket io -->
-    <script type="text/javascript" src="{{ url_for('static', filename='socket.io.js')}}"></script>
+    <!-- Autobahn -->
+
+    <script>AUTOBAHN_DEBUG = true;</script>
+    <script type="text/javascript" src="{{ url_for('static', filename='autobahn.min.js')}}"></script>
+    
 
     <!-- jQuery -->
-    <script type="text/javascript" src="{{ url_for('static', filename='jquery/jquery-1.11.1.min.js')}}"></script>
-    {#    <script type="text/javascript" src="{{ url_for('static', filename='jquery/ui/jquery-ui.js')}}"></script>#}
-    {#    <link rel="stylesheet" href="{{ url_for('static', filename='jquery/ui/jquery-ui.css')}}">#}
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery-1.11.1.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery-ui-1.11.2/jquery-ui.min.js')}}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='jquery-ui-1.11.2/jquery-ui.min.css')}}">
 
     <!-- Highcharts-->
     <script type="text/javascript" src="{{ url_for('static', filename='highcharts/highcharts.js')}}"></script>
@@ -30,9 +33,10 @@
 
 
 </head>
-<body onload="draw();">
+<body>
     <H1>Hello World!</H1>
     <canvas id="image" width="981" height="1043"></canvas>
     <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto; float: left;"></div>
+    <div id="power"></div>
 </body>
 </html>
